@@ -14,7 +14,7 @@ RUN  pip3 install -r requirements.txt
 # copy the content of the local files to the working directory
 COPY src_status/ .
 
-EXPOSE 8080
 # command to run on container start
 CMD ["python3","./app.py"] 
 
+EXPOSE 8080:8080
