@@ -1,6 +1,5 @@
 import docker
 import requests
-from django.shortcuts import render
 import logging 
 import os
 import json
