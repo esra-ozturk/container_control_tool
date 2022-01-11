@@ -8,8 +8,8 @@ WORKDIR /status_state_controller
 COPY requirements.txt .
 
 # install dependencies
-RUN  pip3 install --upgrade pip
-RUN python -m pip install -r requirements.txt
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
 
 # copy the content of the local src directory to the working directory
 COPY src_controller/ .
