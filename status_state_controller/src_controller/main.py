@@ -36,7 +36,7 @@ def control_containers(status_state_list,current_list):
                 logging.info('%s restarted',current_container)
     
     except Exception:
-        logging.info('some stopped containers could not be started',current_container)
+        logging.info('Some stopped containers could not be started')
         pass          
 
     #delete any container that is not found in the status_state_list
@@ -48,7 +48,7 @@ def control_containers(status_state_list,current_list):
                 logging.info('%s stopped',current_container)
                 
     except Exception:
-        logging.info('Some containers could not be stopped',current_container)
+        logging.info('Some containers could not be stopped')
         pass
 
     logging.info('Containers running at startup : %s',status_state_list)
