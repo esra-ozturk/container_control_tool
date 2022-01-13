@@ -11,7 +11,7 @@ logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
 def get_containers() :
 
     try:
-        api_url = "http://localhost:8080/status_state_api"
+        api_url = "http://status:8080/status_state_api"     
         response = requests.get(api_url)
         data = response.content
         json_data = json.loads(data)
@@ -31,7 +31,7 @@ def control_containers(status_state_list,current_list):
     try:
         for id in first_ids:
             if id not in current_ids :  
-                current_container = client.containers.get(id)      #container[3] == "stopped" : 
+                current_container = client.containers.get(id)    
                 current_container.restart()
                 logging.info('%s restarted',current_container)
     
