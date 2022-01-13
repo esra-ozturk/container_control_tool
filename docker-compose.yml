@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  status :
+    build: ./status_state_api
+    volumes:
+      - ./status_state_api:/usr/src/app
+    ports:
+      - 8080:8080
+
+  controller:
+    build: ./status_state_controller
+    depends_on:
+      - status
