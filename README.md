@@ -1,20 +1,14 @@
 container_control_tool
 
 Clone the Repository - git clone https://github.com/esra-ozturk/container_control_tool.git
+Move to the root  directory to build the docker images and create & run containers and volumes :
 
-Move to the directory - cd status_state_api   
-
-Build the docker image - docker image build -t status_api .
-
-Create and run a container - docker container run -d -p 8080:8080 status_api
+- docker-compose up
 
 Navigate to http://localhost:8080/status_state_api to see json file
 
-Move to the directory - cd status_state_controller
+All actions performed by the tool will be seen in the console.
 
-Build the docker image - docker image build -t controller .
-
-Create and run a container - docker container run -d controller
 
 Why Flask framework ?
 Flask needs little dependency to update and it is lightweight and flexible
