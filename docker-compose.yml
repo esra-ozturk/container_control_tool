@@ -5,10 +5,13 @@ services:
     build: ./status_state_api
     volumes:
       - ./status_state_api:/usr/src/app
+      - /var/run/docker.sock:/var/run/docker.sock 
     ports:
       - 8080:8080
 
   controller:
     build: ./status_state_controller
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock 
     depends_on:
       - status
