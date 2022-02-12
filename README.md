@@ -3,8 +3,10 @@ This tool enforces that only a given list of containers will be allowed to run i
 your local docker host.
 
 
-Clone the Repository - git clone https://github.com/esra-ozturk/container_control_tool.git
-Move to the root  directory to build the docker images and create & run containers and volumes :
+Clone the Repository 
+- git clone https://github.com/esra-ozturk/container_control_tool.git
+
+Move to the root  directory and run :
 
 - docker-compose up
 
